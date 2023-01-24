@@ -1,21 +1,13 @@
 #include <stdio.h>
-
+ 
 int main(void){
-    int a, b;
-    scanf("%d %d", &a, &b);
-    
-    if(b>=45){
-        b = b-45;
-    }else {
-        if(a==0){
-            a = 23;
-        }
-        else {
-            a = a-1;
-        }
-        b = b+15;
-    }
-    
-    printf("%d %d", a, b);
-    return 0;
+    int H, M;
+    scanf("%d %d", &H, &M);
+ 
+    if(M>=45)
+        printf("%d %d", H, M-45);
+    else if(H>0)
+        printf("%d %d", H-1, 60-(45-M));
+    else
+        printf("23 %d", 60-(45-M));
 }
